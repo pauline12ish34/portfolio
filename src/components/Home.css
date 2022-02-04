@@ -1,0 +1,10 @@
+.home{
+    height:33em;
+}
+@media only screen and (max-width: 600px) {
+  .grid div{
+width:100%;
+  }
+
+  }
+  /* BsTelephonePlus */
