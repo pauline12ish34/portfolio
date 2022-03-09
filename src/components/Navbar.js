@@ -1,9 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+  
+    Link
+  } from "react-router-dom";
+// import Home from './Home';
+// import About from './About'
+// import Contact from './Contact'
+//  Routes,Route,
 
-
-const Navbar=()=>{
-    return(
+  export default function Navbar() {
+    return (
+        <Router>
         <nav className='flex justify-between bg-black '>
             <Link to='/' className='pl-8'> <img src="images/Pauline.png" alt="pauline logo" className='w-24 h-24'/></Link>
             <div className='px-4 cursor-pointer md:hidden'>
@@ -12,19 +20,69 @@ const Navbar=()=>{
 
         <div className='pr-8 md:block hidden pt-8 gap-16 links'>
         <Link to='/'> Home</Link>
-        <Link to='/about' className='p-4 text-slate-50'> Home</Link>
-        <Link to='/about' className='p-4 text-slate-50'> About</Link>
+        <Link to='/about' className='p-4 text-slate-50'>Home</Link>
+        <Link to='/about' className='p-4 text-slate-50'> <a href="#b">About</a> </Link>
         <Link to='/menu' className='p-4 text-slate-50'> Work</Link>
         <Link to='/contact' className='p-4 text-slate-50'> Contact</Link>
         </div>
-        
         </nav>
+
+        {/* <Routes>
+          <Route exact path="/contact" element={<Contact/>}/>
+        
+          <Route exact path="/about" element={ <About />}/>
+    
+          <Route exact path="/" element ={ <Home />}/>
+           
+        </Routes> */}
+        </Router>
     )
 }
 
-export default Navbar;
 
 
+
+
+// import React from "react";
+// import {
+//   BrowserRouter as Router,
+//   Routes,Route,
+//   Link
+// } from "react-router-dom";
+// import Users from './ViewList'
+// import NewUser from './CreateUser'
+// export default function Navbar() {
+//   return (
+//     <Router>
+//       <div>
+//         <nav>
+//           <ul>
+//             <li>
+//               <Link to="/" className="p-4 ">Home</Link>
+//             </li>
+//             <li>
+//               <Link to="/about" className="p-4 ">About</Link>
+//             </li>
+//             <li>
+//               <Link to="/users"  className="p-4 ">Contact</Link>
+//             </li>
+//           </ul>
+//         </nav>
+
+//         {/* A <Switch> looks through its children <Route>s and
+//             renders the first one that matches the current URL. */}
+//         <Routes>
+//           <Route exact path="/createUser" element={<NewUser/>}/>
+        
+//           <Route exact path="/users" element={ <Users />}/>
+    
+//           <Route exact path="/" element ={ <NewUser />}/>
+           
+//         </Routes>
+//       </div>
+//     </Router>
+//   );
+// }
 
 
 

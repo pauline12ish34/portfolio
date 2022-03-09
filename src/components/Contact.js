@@ -2,7 +2,7 @@ import React from 'react';
 import Mapping from './map.js';
 // import {FaPhoneAlt,IoLocationOutline } from "react-icons/fa";
 // import {FaLocationArrow } from "react-icons/fa";
- const Contact=()=>{
+export default function Contact() {
      
          return(
              <>
@@ -10,7 +10,6 @@ import Mapping from './map.js';
 <div>
     <h1>Reach Us</h1>
     <h1>Location</h1> 
-    <h1><h1>
     
    <Mapping/>
 </div>
@@ -32,5 +31,3 @@ import Mapping from './map.js';
          );
     
  }
-
- export default Contact;
